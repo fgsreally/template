@@ -1,0 +1,38 @@
+{
+  "name": "template",
+  "private": true,
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*.js",
+    "dist/*.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "example:dev": "npm -C examples/project run dev",
+    "example:build": "npm -C examples/project run build",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:update": "vitest --u",
+    "cypress": " cypress open"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@cypress/vite-dev-server": "^3.0.0",
+    "@cypress/vue": "^3.1.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "cypress": "^10.2.0",
+    "vue-demi": "^0.12.5",
+    "typescript": "^4.5.4",
+    "tsup": "^6.1.2",
+    "vite": "^2.9.9",
+    "vitest": "^0.15.2",
+    "vue-tsc": "^0.34.7"
+  }
+}
